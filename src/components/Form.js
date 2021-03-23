@@ -13,7 +13,6 @@ const Form = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         // Write your POST fetch() or axios() request here
-        axios.post('http://localhost:3111/icecream', flavor)
             
             
         history.push('/')

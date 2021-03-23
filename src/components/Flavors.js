@@ -6,11 +6,7 @@ const Shows = ({ flavors, setFlavors }) => {
 
     useEffect(() => {
         // Write your GET fetch() or axios() request here
-        axios.get('http://localhost:3111/icecream')
-            .then(res => {
-                console.log(res)
-                setFlavors(res.data)
-            })
+        
         
     }, [])
 
