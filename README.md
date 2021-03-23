@@ -29,7 +29,7 @@
  - Run `node db/seed.js` to seed your database 
  - Run `nodemon index.js` to start your server
 
- > The backend is already set up with appropriate route requests according to the original homework assignment from earlier in the week.
+ > The backend is already set up with appropriate routes
 
 ## Front End Instructions
 
