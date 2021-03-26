@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
-import Flavors from './components/Flavors';
-import FlavorID from './components/FlavorID';
+import FlavorList from './components/FlavorList';
+import Flavor from './components/Flavor';
 import Form from './components/Form';
 import Nav from './components/Nav';
 
@@ -14,12 +14,12 @@ function App() {
       <Route
         path="/"
         exact
-        render={() => <Flavors flavors={flavors} setFlavors={setFlavors} />}
+        render={() => <FlavorList flavors={flavors} setFlavors={setFlavors} />}
       />
       <Route path="/add-flavor" component={Form} />
       <Route
         path="/flavors/:id"
-        render={(routerProps) => <FlavorID match={routerProps.match} />}
+        render={(routerProps) => <Flavor match={routerProps.match} />}
       />
     </div>
   );
