@@ -3,21 +3,22 @@ import Flavor from './FlavorItem';
 import axios from 'axios';
 
 const FlavorList = () => {
-  const [flavors, setFlavors] = useState();
+  const [flavors, setFlavors] = useState([]);
+
   useEffect(() => {
     // Write your GET fetch() or axios() request here
   }, []);
 
-  if (!flavors) {
+  if (!flavors.length) {
     return <h1>Loading...</h1>;
   }
 
   return (
-    <div>
-      {flavors.map((flavor, index) => (
-        <Flavor key={index} flavor={flavor} index={index} />
+    <ul>
+      {flavors.map((flavor) => (
+        <Flavor key={flavor._id} flavor={flavor} />
       ))}
-    </div>
+    </ul>
   );
 };
 
