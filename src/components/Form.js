@@ -1,37 +1,44 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
-import axios from 'axios'
+import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 
 const Form = () => {
-    const history = useHistory()
-    const [flavor, setFlavor] = useState({flavor: '', varieties: 0, delicious: true})
+  const history = useHistory();
+  const [flavor, setFlavor] = useState({
+    flavor: '',
+    varieties: 0,
+  });
 
-    const handleChange = (event) => {
-            setFlavor({...flavor, [event.target.name]: event.target.value})
-    }
+  const handleChange = (event) => {
+    setFlavor({ ...flavor, [event.target.id]: event.target.value });
+  };
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        // Write your POST fetch() or axios() request here
-            
-            
-        history.push('/')
-        
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Write your POST fetch() or axios() request here
 
+    history.push('/');
+  };
 
-
-    return (
-        <div>
-            <form onSubmit={handleSubmit} className="create-form">
-                <label for="flavor">Flavor: </label>
-                <input onChange={handleChange} name="flavor" value={flavor.flavor} placeholder="Flavor"/>
-                <label for="varieties">Varieties: </label>
-                <input onChange={handleChange} name="varieties"value={flavor.varieties} placeholder="Varieties"/>
-                <button id="button" type="submit">Submit</button>
-            </form>
-        </div>
-    );
+  return (
+    <form onSubmit={handleSubmit} className="create-form">
+      <label htmlFor="flavor">Flavor: </label>
+      <input
+        onChange={handleChange}
+        id="flavor"
+        value={flavor.flavor}
+        placeholder="Flavor"
+      />
+      <label htmlFor="varieties">Varieties: </label>
+      <input
+        onChange={handleChange}
+        id="varieties"
+        value={flavor.varieties}
+        placeholder="Varieties"
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
 };
 
 export default Form;
