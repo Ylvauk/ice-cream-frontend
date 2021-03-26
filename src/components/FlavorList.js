@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Flavor from './FlavorItem';
 import axios from 'axios';
 
-const FlavorList = ({ flavors, setFlavors }) => {
+const FlavorList = () => {
+  const [flavors, setFlavors] = useState();
   useEffect(() => {
     // Write your GET fetch() or axios() request here
   }, []);
