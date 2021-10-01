@@ -11,9 +11,7 @@ const Flavor = ({ match }) => {
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3111/icecream/${id}`)
-      .then((res) => res.json())
-      .then((res) => setFlavor(res));
+    
   }, [id]);
 
   const handleChange = (event) => {
