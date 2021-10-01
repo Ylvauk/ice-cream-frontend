@@ -57,6 +57,21 @@ const Flavor = ({ match }) => {
               id="varieties"
               value={flavor.varieties}
             />
+            	<div style={{ display: 'flex', alignItems: 'baseline' }}>
+							<label htmlFor='delicious'>Delicious?</label>
+							<input
+								type='checkbox'
+								id='delicious'
+								value={flavor.delicious}
+								onChange={() => {
+									setFlavor({
+										...flavor,
+										delicious: !flavor.delicious,
+									});
+								}}
+								checked={flavor.delicious}
+							/>
+						</div>
             <button type="submit">Submit</button>
             <button type="button" onClick={closeModal}>
               Close
