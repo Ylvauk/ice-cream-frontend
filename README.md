@@ -34,7 +34,7 @@
 
 ## Front End Instructions
 
-- Fork and clone this repository.
+- Clone this repository.
 - Change into the new directory.
 - Run `npm i` to install dependencies
 - Run `npm start` to start your React server
