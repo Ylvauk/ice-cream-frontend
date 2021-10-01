@@ -82,6 +82,7 @@ const Flavor = ({ match }) => {
         <>
           <h2>{flavor.flavor}</h2>
           <h3>Varieties: {flavor.varieties}</h3>
+          <p>Delicious: {flavor.delicious ? 'Yes' : 'No'}</p>
 
           <button onClick={editShowPage}>Edit</button>
           <button onClick={handleDelete}>Delete</button>
