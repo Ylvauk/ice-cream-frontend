@@ -22,10 +22,11 @@
 -----
 
 ## Back End Instructions
- - Clone down this backend [Ice Cream API](https://git.generalassemb.ly/SEIR-201/ice-cream-api)
+ - Clone down this backend [Ice Cream API](../../../ice-cream-api)
  - Change into the new directory.
  - Run `npm i` to install dependencies
  - Install nodemon if it is not already installed on your machine
+ - Create a `.env` file and add a `DATABASE_URL` variable with your connection string
  - Run `node db/seed.js` to seed your database 
  - Run `nodemon index.js` to start your server
 
