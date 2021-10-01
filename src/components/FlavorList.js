@@ -7,17 +7,17 @@ const FlavorList = () => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		// Write your GET fetch() or axios() request here
-		handleLoadingTimeOut();
-	}, []);
-
-	function handleLoadingTimeOut() {
-		setTimeout(() => {
+		const handleLoadingTimeOut = setTimeout(() => {
 			if (!flavors.length) {
 				setLoading(false);
 			}
 		}, 5000);
-	}
+		
+		// Write your GET fetch() or axios() request here
+
+		
+		return () => clearTimeout(handleLoadingTimeOut);
+	}, []);
 
 	if (loading && !flavors.length) {
 		return <h2>Loading...</h2>;
