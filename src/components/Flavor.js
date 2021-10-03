@@ -11,9 +11,7 @@ const Flavor = ({ match }) => {
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3111/icecream/${id}`)
-      .then((res) => res.json())
-      .then((res) => setFlavor(res));
+    
   }, [id]);
 
   const handleChange = (event) => {
@@ -59,6 +57,21 @@ const Flavor = ({ match }) => {
               id="varieties"
               value={flavor.varieties}
             />
+            	<div style={{ display: 'flex', alignItems: 'baseline' }}>
+							<label htmlFor='delicious'>Delicious?</label>
+							<input
+								type='checkbox'
+								id='delicious'
+								value={flavor.delicious}
+								onChange={() => {
+									setFlavor({
+										...flavor,
+										delicious: !flavor.delicious,
+									});
+								}}
+								checked={flavor.delicious}
+							/>
+						</div>
             <button type="submit">Submit</button>
             <button type="button" onClick={closeModal}>
               Close
@@ -69,6 +82,7 @@ const Flavor = ({ match }) => {
         <>
           <h2>{flavor.flavor}</h2>
           <h3>Varieties: {flavor.varieties}</h3>
+          <p>Delicious: {flavor.delicious ? 'Yes' : 'No'}</p>
 
           <button onClick={editShowPage}>Edit</button>
           <button onClick={handleDelete}>Delete</button>

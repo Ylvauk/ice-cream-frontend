@@ -1,13 +1,171 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Oleo+Script:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--dark: rgb(0, 106, 219);
+	--gray: rgb(180, 180, 180);
+	--light: white;
+	--primary: rgb(38, 206, 253);
+	--secondary: rgb(255, 11, 111);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+body {
+	font-family: 'Kiwi Maru', serif;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 1em;
+	min-height: 100vh;
+	max-width: 1200px;
+}
+
+button {
+	background-color: var(--dark);
+	border-color: transparent;
+	border-radius: 2rem;
+	color: var(--light);
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.75rem 1.25rem;
+}
+
+button:focus {
+	outline: none;
+	box-shadow: 0px 0px 2px 3px var(--primary);
+}
+
+a + a,
+a + button,
+button + button {
+	margin-left: 0.25rem;
+}
+
+form {
+	width: 100%;
+}
+
+h1 {
+	color: inherit;
+	font-family: 'Oleo Script', cursive;
+	font-size: 3rem;
+	line-height: 1;
+	margin: 0;
+	text-shadow: 1px 1px 0 var(--dark);
+}
+
+header {
+	background-color: var(--primary);
+	border-radius: 0 0 100% 0;
+	color: var(--light);
+	padding: 1rem;
+	text-align: center;
+}
+
+input {
+	border: 1px solid var(--gray);
+	border-radius: 2rem;
+	display: block;
+	margin-bottom: 1rem;
+	padding: 0.75rem 1rem;
+	width: 100%;
+}
+
+label {
+	display: block;
+}
+
+li {
+	border-bottom: 1px dotted;
+}
+
+li > a {
+	padding: 1rem;
+	display: inline-block;
+	width: 100%;
+}
+
+main {
+	padding: 1rem;
+}
+
+nav {
+	margin: 1rem 0;
+	padding: 1rem 0;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav a {
+	background-color: var(--dark);
+	border-radius: 2rem;
+	color: var(--light);
+	font-weight: bold;
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: var(--light);
+	color: var(--dark);
+	text-decoration: none;
+}
+
+small {
+	display: block;
+	font-family: 'Kiwi Maru', serif;
+	font-size: 0.5em;
+}
+
+svg {
+	max-height: 20rem;
+	max-width: 90%;
+}
+
+ul {
+	list-style-type: none;
+	margin: -1rem;
+	padding: 0;
+}
+
+.modal {
+	background-color: var(--secondary);
+	bottom: 0;
+	color: white;
+	display: grid;
+	left: 0;
+	padding: 1rem;
+	place-content: center;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+@media (min-width: 600px) {
+	form {
+		max-width: 20rem;
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 }
