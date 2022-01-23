@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const Flavor = ({ match }) => {
-	const id = match.params.id;
-
+	const { id } = useParams();
 	const navigate = useNavigate();
 
 	const [flavor, setFlavor] = useState(null);
