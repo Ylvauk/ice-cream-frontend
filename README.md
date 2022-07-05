@@ -152,7 +152,7 @@ axios.put(`http://localhost:3111/icecreams/${flavor._id}`, flavor);
 </br>
 
 <p>Awesome! Now go try updating an existing flavor by clicking on the Edit button. It'll bring up a form that has values that represent info about each flavor.</p>
-<p>When we update a field and click submit, It will redirect us to the home page. Go ahead and click on the show that you updated and you should see the updated changes! Woo!</p>
+<p>When we update a field and click submit, It will redirect us to the home page. Go ahead and click on the flavor that you updated and you should see the updated changes! Woo!</p>
 <hr>
 
 ## CRU(D) - Delete
